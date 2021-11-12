@@ -52,3 +52,5 @@ C:\Users\rbulb\Source\Repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj
 C:\Users\rbulb\Source\Repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
 C:\Users\rbulb\Source\Repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 C:\Users\rbulb\Source\Repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
+C:\Users\rbulb\Source\Repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\bin\Debug\net6.0\MediatR.dll
+C:\Users\rbulb\Source\Repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll

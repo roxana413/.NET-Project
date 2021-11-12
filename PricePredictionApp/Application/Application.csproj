@@ -8,11 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <Folder Include="Features\Commands\" />
+    <Folder Include="Features\PricePrediction\" />
+    <Folder Include="Features\Queries\" />
   </ItemGroup>
 
 </Project>
