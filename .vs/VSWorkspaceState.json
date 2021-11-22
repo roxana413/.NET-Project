@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PricePredictionApp",
+    "\\PricePredictionApp\\WebAPI",
+    "\\PricePredictionApp\\WebAPI\\Controllers",
+    "\\PricePredictionApp\\WebAPI\\Controllers\\v1"
   ],
-  "SelectedNode": "\\PricePredictionApp.sln",
+  "SelectedNode": "\\PricePredictionApp\\WebAPI\\Controllers\\v1\\HousesController.cs",
   "PreviewInSolutionExplorer": false
 }

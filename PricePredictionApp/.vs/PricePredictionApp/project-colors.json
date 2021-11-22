@@ -20,7 +20,17 @@
       "ProjectGuid": "18aa1216-de4d-41ed-ba19-a058602ca3b9",
       "DisplayName": "AppTests",
       "ColorIndex": 3
+    },
+    "7bf66fb2-7709-49f9-a99c-6c7e220ce636": {
+      "ProjectGuid": "7bf66fb2-7709-49f9-a99c-6c7e220ce636",
+      "DisplayName": "WebAPI",
+      "ColorIndex": 4
+    },
+    "151e16d6-366b-449c-ab95-87aa981c49f5": {
+      "ProjectGuid": "151e16d6-366b-449c-ab95-87aa981c49f5",
+      "DisplayName": "Core",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 6
 }
