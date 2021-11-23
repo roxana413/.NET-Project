@@ -1,8 +1,12 @@
-﻿using Domain.Common;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Domain.Entities
+namespace Application.DTO
 {
-    public class House : BaseEntity
+    public class HouseDTO
     {
         public DateTime DateSold { get; set; }
         public decimal Price { get; set; }
@@ -20,6 +24,5 @@ namespace Domain.Entities
         public int YearBuilt { get; set; }
         public int YearRenovated { get; set; }
         public string Zipcode { get; set; }
-
     }
 }
