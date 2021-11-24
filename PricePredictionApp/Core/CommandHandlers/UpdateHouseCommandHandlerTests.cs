@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 using FakeItEasy;
@@ -23,12 +20,13 @@ namespace Core.CommandHandlers
         }
 
         [Fact]
-        public async Task Given_UpdateHouseCommandHandler_When_HandleIsCalled_Then_UpdateHouseAsyncIsCalled()
+        public async Task Given_UpdateHouseCommandHandlerAndEmptyHouse_When_HandleIsCalled_Then_ExceptionIsThrown()
         {
          
-            await handler.Handle(new UpdateHouseCommand() { UpdatedHouse = new House()}, default);
+            Func<Task<Guid>> act = async () => await handler.Handle(new UpdateHouseCommand() { UpdatedHouse = new House()}, default);
 
-            A.CallTo(() => repository.UpdateAsync(A<House>._)).MustHaveHappenedOnceExactly();
+            await Assert.ThrowsAsync<Exception>(act);
+            //A.CallTo(() => repository.UpdateAsync(A<House>._)).MustHaveHappenedOnceExactly();
         }
     }
 }

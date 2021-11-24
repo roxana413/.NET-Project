@@ -2,10 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\PricePredictionApp",
+    "\\PricePredictionApp\\Application",
+    "\\PricePredictionApp\\Application\\Features",
+    "\\PricePredictionApp\\Application\\Features\\Commands",
+    "\\PricePredictionApp\\Core",
+    "\\PricePredictionApp\\Core\\QueryHandlers",
     "\\PricePredictionApp\\WebAPI",
     "\\PricePredictionApp\\WebAPI\\Controllers",
     "\\PricePredictionApp\\WebAPI\\Controllers\\v1"
   ],
-  "SelectedNode": "\\PricePredictionApp\\WebAPI\\Controllers\\v1\\HousesController.cs",
+  "SelectedNode": "\\PricePredictionApp\\Application\\Features\\Commands\\DeleteHouseCommandHandler.cs",
   "PreviewInSolutionExplorer": false
 }
