@@ -1,0 +1,60 @@
+<mat-toolbar color="primary">
+
+
+    <div class="nav-buttons" fxShow="true" fxHide.lt-md="true">
+        <div>
+            <button mat-button routerLink="/home">House price prediction</button>
+            <button mat-button routerLink="/house-pricing">Check price</button>
+        </div>
+
+        <div>
+
+            <!-- <button mat-icon-button [matMenuTriggerFor]="notificationMenu">
+                <mat-icon>notifications</mat-icon>
+            </button>
+            <mat-menu #notificationMenu="matMenu">
+                <button mat-menu-item>
+                    <span>Text notificare 1</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Text notificare 2</span>
+                </button>
+                <button mat-menu-item>
+                    <span>Text notificare 3</span>
+                </button>
+            </mat-menu>
+ -->
+
+            <button mat-icon-button [matMenuTriggerFor]="userMenu">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+
+            <mat-menu #userMenu="matMenu">
+
+                <button *ngIf="!userLoggedIn" mat-menu-item routerLink="/auth/login">
+                    <mat-icon>login</mat-icon>
+                    <span>Login</span>
+                </button>
+                <button *ngIf="!userLoggedIn" mat-menu-item routerLink="/auth/register">
+                    <mat-icon>login</mat-icon>
+                    <span>Register</span>
+                </button>
+                <button *ngIf="userLoggedIn" mat-menu-item routerLink="/house-pricing/history">
+                    <mat-icon>history</mat-icon>
+                    <span>History</span>
+                </button>
+                <button *ngIf="userLoggedIn" mat-menu-item>
+                    <mat-icon>settings</mat-icon>
+                    <span>Settings</span>
+                </button>
+                <button *ngIf="userLoggedIn" mat-menu-item (click)="onLogout()">
+                    <mat-icon>logout</mat-icon>
+                    <span>Logout</span>
+                </button>
+            </mat-menu>
+        </div>
+    </div>
+
+
+
+</mat-toolbar>

@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <h2>Evaluate house price</h2>
+
+            <mat-form-field class="full-width-input">
+                <input matInput placeholder="Zipcode" formControlName="zipcode" required>
+                <mat-error>
+                    This field is mandatory
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+                <input matInput placeholder="Grade" formControlName="grade" required>
+                <mat-error>
+                    Please provide a valid grade
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+                <input matInput placeholder="Number of bedrooms" formControlName="bedrooms" required>
+                <mat-error>
+                    Please provide a valid number of bedrooms
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field *ngIf="userLoggedIn" class="full-width-input">
+                <input matInput placeholder="Year of construction" formControlName="constructionYear">
+                <mat-error>
+                    Please provide a valid year of construction
+                </mat-error>
+            </mat-form-field>
+            <!-- <mat-error *ngIf="registerInvalid">
+                {{errorMessage}}
+            </mat-error> -->
+            <button mat-raised-button color="primary">Check price</button>
+        </form>
+    </mat-card-content>
+</mat-card>
