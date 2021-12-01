@@ -1,0 +1,25 @@
+mat-toolbar {
+  justify-content: space-between;
+  .app-title {
+    padding-right: 30px;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+mat-sidenav {
+  height: 0;
+  .side-menu {
+    float: right;
+    min-width: 150px;
+    button {
+      span {
+        padding-left: 10px;
+      }
+    }
+  }
+}
