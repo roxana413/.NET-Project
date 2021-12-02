@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\rbulb\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\rbulb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\obj\\",
+      "projectPath": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rbulb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

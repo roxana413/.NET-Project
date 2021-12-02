@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\Persistence.csproj": {}
+    "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\Persistence.csproj": {
+    "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\rbulb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\obj\\",
+        "projectPath": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rbulb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

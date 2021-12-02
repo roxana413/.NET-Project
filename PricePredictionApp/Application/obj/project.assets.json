@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rbulb\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\Application.csproj",
+      "projectUniqueName": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\rbulb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\obj\\",
+      "projectPath": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rbulb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj"
+            "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Domain\\Domain.csproj"
             }
           }
         }

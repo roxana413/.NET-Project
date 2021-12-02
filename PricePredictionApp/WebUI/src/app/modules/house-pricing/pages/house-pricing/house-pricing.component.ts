@@ -1,3 +1,6 @@
+import { House } from './../../../../core/models/house';
+
+import { PriceEstimationService } from './../../../../core/services/price-estimation.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -11,7 +14,9 @@ import { AuthService } from '../../../../core/services/auth.service';
 export class HousePricingComponent implements OnInit {
   form: FormGroup
   userLoggedIn = false
-  constructor(private authService: AuthService,
+  house: House
+  constructor(private priceEstimationService: PriceEstimationService,
+    private authService: AuthService,
     private router: Router,
     private fb: FormBuilder) {
     /*   this.authService.userLoggedInStateChange.subscribe((value) => {
@@ -30,6 +35,15 @@ export class HousePricingComponent implements OnInit {
   }
 
   onSubmit(): void {
+    this.house.bedrooms = this.form.controls.bedrooms.value
+    this.house.zipcode = this.form.controls.zipcode.value
+    this.house.grade = this.form.controls.grade.value
+    this.house.constructionYear = this.form.controls.constructionYear.value ? this.form.controls.constructionYear.value : null
+    this.priceEstimationService.getPrice(this.house).then((data) => {
+      console.log(data)
+    })
+
+
   }
 
 }

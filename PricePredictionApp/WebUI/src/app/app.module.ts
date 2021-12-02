@@ -1,3 +1,6 @@
+import { AuthService } from 'src/app/modules';
+import { Constants } from './config/constants';
+import { ApiHttpService } from './core/services/api-http.service';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
@@ -25,7 +28,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './core/footer/footer.component';
@@ -34,6 +37,7 @@ import { FooterComponent } from './core/footer/footer.component';
   declarations: [AppComponent, ToolbarComponent, PageNotFoundComponent, FooterComponent],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -63,7 +67,7 @@ import { FooterComponent } from './core/footer/footer.component';
     HttpClientModule,
     NgbModule
   ],
-  providers: [],
+  providers: [AuthService,ApiHttpService, Constants,],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

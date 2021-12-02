@@ -1,3 +1,6 @@
+import { User } from './../models/user';
+import { Constants } from './../../config/constants';
+import { ApiHttpService } from './api-http.service';
 import { Observable } from 'rxjs/internal/Observable';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -18,7 +21,9 @@ export class AuthService {
   userLoggedInStateChange: Subject<boolean> = new Subject<boolean>();
 
 
-  constructor(private http: HttpClient,) {
+  constructor(private http: HttpClient,
+    private apiService: ApiHttpService,
+    private constants: Constants) {
     this.userLoggedInStateChange.subscribe((value) => {
       this.isUserLoggedIn = value
     });
@@ -63,6 +68,22 @@ export class AuthService {
       return this.authInstance.currentUser.get();
     }
   }
+
+  async login(user: User): Promise<any> {
+    this.apiService.post(this.constants.API_ENDPOINT + "login", user).subscribe(
+      (data: any) => { return data }, // success path
+      error => { return error } // error path
+    );
+  }
+
+  async register(user: User): Promise<any> {
+    this.apiService.post(this.constants.API_ENDPOINT + "register", user).subscribe(
+      (data: any) => { return data }, // success path
+      error => { return error } // error path
+    );
+  }
+
+
 
   async logout(): Promise<any> {
     var auth2 = gapi.auth2.getAuthInstance();
