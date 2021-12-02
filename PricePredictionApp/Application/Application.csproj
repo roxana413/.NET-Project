@@ -12,9 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Commands\" />
     <Folder Include="Features\PricePrediction\" />
-    <Folder Include="Features\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
   </ItemGroup>
 
 </Project>
