@@ -3,7 +3,7 @@
     "",
     "\\PricePredictionApp",
     "\\PricePredictionApp\\Core",
-    "\\PricePredictionApp\\Core\\QueryHandlers",
+    "\\PricePredictionApp\\Core\\CommandHandlers",
     "\\PricePredictionApp\\Persistence",
     "\\PricePredictionApp\\Persistence\\EFCore",
     "\\PricePredictionApp\\Persistence\\EFCore\\Authentication",
@@ -11,6 +11,6 @@
     "\\PricePredictionApp\\WebAPI\\Controllers",
     "\\PricePredictionApp\\WebAPI\\Controllers\\v1"
   ],
-  "SelectedNode": "\\PricePredictionApp\\WebAPI\\Program.cs",
+  "SelectedNode": "\\PricePredictionApp\\Core\\CommandHandlers\\UpdateHouseCommandHandlerTests.cs",
   "PreviewInSolutionExplorer": false
 }
