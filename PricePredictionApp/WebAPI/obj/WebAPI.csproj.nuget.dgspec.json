@@ -4,6 +4,215 @@
     "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
+    "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\rbulb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rbulb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\rbulb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rbulb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\rbulb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\rbulb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\Application.csproj"
+              },
+              "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.ApiAuthorization.IdentityServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -27,7 +236,17 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\Application.csproj"
+              },
+              "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Persistence\\Persistence.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

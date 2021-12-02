@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.Exceptions;
+using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
 using System.Reflection;
@@ -18,7 +19,7 @@ namespace Application.Features.Commands
             House house = await repository.GetByIdAsync(request.UpdatedHouse.Id);
             if (house == null || house.Id == Guid.Empty)
             {
-                throw new Exception("Product does not exist.");
+                throw new EntityNotFoundException($"House with ID {request.UpdatedHouse.Id} does not exist.");
             }
 
             Array.ForEach(house.GetType().GetProperties(), property => updateProperty(property, house, request.UpdatedHouse));

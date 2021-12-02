@@ -5,6 +5,7 @@ using FakeItEasy;
 using Application.Features.Commands;
 using Application.Interfaces;
 using Domain.Entities;
+using Application.Exceptions;
 
 namespace Core.CommandHandlers
 {
@@ -25,7 +26,7 @@ namespace Core.CommandHandlers
          
             Func<Task<Guid>> act = async () => await handler.Handle(new UpdateHouseCommand() { UpdatedHouse = new House()}, default);
 
-            await Assert.ThrowsAsync<Exception>(act);
+            await Assert.ThrowsAsync<EntityNotFoundException>(act);
             //A.CallTo(() => repository.UpdateAsync(A<House>._)).MustHaveHappenedOnceExactly();
         }
     }

@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.Exceptions;
+using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
 
@@ -17,7 +18,7 @@ namespace Application.Features.Commands
             House house = await repository.GetByIdAsync(request.Id);
             if (house == null)
             {
-                throw new Exception("Product does not exist.");
+                throw new EntityNotFoundException($"House with ID {request.Id} does not exist.");
             }
 
             await repository.DeleteAsync(house);
