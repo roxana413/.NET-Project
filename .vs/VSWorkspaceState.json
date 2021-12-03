@@ -11,6 +11,6 @@
     "\\PricePredictionApp\\WebAPI\\Controllers",
     "\\PricePredictionApp\\WebAPI\\Controllers\\v1"
   ],
-  "SelectedNode": "\\PricePredictionApp\\Core\\CommandHandlers\\UpdateHouseCommandHandlerTests.cs",
+  "SelectedNode": "\\PricePredictionApp\\PricePredictionApp.sln",
   "PreviewInSolutionExplorer": false
 }

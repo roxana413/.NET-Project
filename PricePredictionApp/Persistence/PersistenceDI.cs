@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using Application.Interfaces;
 using System.Text;
 using Persistence.EFCore.Authentication;
+using Persistence.EFCore.Users;
 
 namespace Persistence
 {
@@ -42,6 +43,23 @@ namespace Persistence
             });
 
             services.AddTransient<IAuthenticationManager, AuthenticationManager>();
+            services.AddTransient<IUsersManager, UsersManager>();
+        }
+
+        public static async Task CreateRoles(IServiceProvider provider)
+        {
+            var scope = provider.CreateScope();
+            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            string[] roleNames = { "Admin", "User" };
+
+            foreach (string roleName in roleNames)
+            {
+                var roleExists = await roleManager.RoleExistsAsync(roleName);
+                if (!roleExists)
+                {
+                    await roleManager.CreateAsync(new IdentityRole(roleName));
+                }
+            }
         }
     }
 }

@@ -45,6 +45,11 @@ namespace Persistence.EFCore.Authentication
                 }
                 return (AuthenticationStatus.INVALID_PASSWORD, string.Join("\n", errors));
             }
+            if (newUser.UserName == "admin")
+            {
+                await userManager.AddToRoleAsync(newUser, "Admin");
+            }
+            await userManager.AddToRoleAsync(newUser, "User");
             return (AuthenticationStatus.SUCCESS, null);
         }
 
