@@ -1,3 +1,4 @@
+import { HousePricesService } from './core/services/housePrices.service';
 import { AuthService } from 'src/app/modules';
 import { Constants } from './config/constants';
 import { ApiHttpService } from './core/services/api-http.service';
@@ -67,7 +68,7 @@ import { FooterComponent } from './core/footer/footer.component';
     HttpClientModule,
     NgbModule
   ],
-  providers: [AuthService,ApiHttpService, Constants,],
+  providers: [AuthService, ApiHttpService, Constants, HousePricesService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

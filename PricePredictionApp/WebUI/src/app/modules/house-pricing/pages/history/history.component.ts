@@ -1,5 +1,5 @@
+import { HousePricesService } from './../../../../core/services/housePrices.service';
 import { House } from './../../../../core/models/house';
-import { PriceEstimationService } from './../../../../core/services/price-estimation.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HistoryComponent implements OnInit {
 
   houses = []
-  constructor(private housePricingService: PriceEstimationService) { }
+  constructor(private housePricingService: HousePricesService) { }
 
   ngOnInit(): void {
     let house: House
@@ -29,8 +29,40 @@ export class HistoryComponent implements OnInit {
       price: 439284
     }
     this.houses.push(house)
+
+    house = {
+      zipcode: "3214FF",
+      grade: 6,
+      bedrooms: 3,
+      price: 5432543
+    }
+    this.houses.push(house)
+
+    house = {
+      zipcode: "fds332",
+      grade: 10,
+      bedrooms: 10,
+      price: 43254352
+    }
+    this.houses.push(house)
+
     //get history
     //this.houses = this.housePricingService.getHistory()
+  }
+
+  deleteHouse(i: number): void {
+    console.log(i)
+    this.houses.splice(i, 1)
+    console.log(this.houses)
+    this.housePricingService.deleteElementFromHistory(i)
+    //make delete request
+  }
+
+  deleteAllHouses(): void {
+    this.houses = []
+    this.housePricingService.deleteHistory()
+
+    //make delete request
   }
 
 }

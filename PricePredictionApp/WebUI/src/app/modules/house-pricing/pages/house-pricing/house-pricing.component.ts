@@ -1,6 +1,6 @@
+import { HousePricesService } from './../../../../core/services/housePrices.service';
 import { House } from './../../../../core/models/house';
 
-import { PriceEstimationService } from './../../../../core/services/price-estimation.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -15,7 +15,7 @@ export class HousePricingComponent implements OnInit {
   form: FormGroup
   userLoggedIn = false
   house: House
-  constructor(private priceEstimationService: PriceEstimationService,
+  constructor(private priceEstimationService: HousePricesService,
     private authService: AuthService,
     private router: Router,
     private fb: FormBuilder) {
