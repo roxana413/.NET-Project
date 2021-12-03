@@ -1,4 +1,4 @@
-import { ProjectsService } from "../../../index";
+import { PriceEstimationService } from "../../../index";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -13,7 +13,7 @@ export class ProjectsComponent implements OnInit {
     { id: 3, name: "inca un proiect" },
   ];
 
-  constructor(private projectsService: ProjectsService) { }
+  constructor(private PriceEstimationService: PriceEstimationService) { }
 
   ngOnInit(): void { }
 }

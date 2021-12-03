@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "FC-TaskManagement": {
+    "House-price-prediction": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/FC-TaskManagement",
+            "outputPath": "dist/House-price-prediction",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "FC-TaskManagement:build"
+            "browserTarget": "House-price-prediction:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "FC-TaskManagement:build:production"
+              "browserTarget": "House-price-prediction:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "FC-TaskManagement:build"
+            "browserTarget": "House-price-prediction:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "FC-TaskManagement:serve"
+            "devServerTarget": "House-price-prediction:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "FC-TaskManagement:serve:production"
+              "devServerTarget": "House-price-prediction:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "FC-TaskManagement"
+  "defaultProject": "House-price-prediction"
 }
