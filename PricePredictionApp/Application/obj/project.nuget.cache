@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NVbP1AoQidCBNvuhmks/UJjC1v3pp07e6yQBYhGOZ5tnvdIjGQJQ5z1Nqmo/gE+0/m8OulBX2X0p0ORqu2v0CQ==",
+  "dgSpecHash": "whtv6YtBmE96rsCNrG5JflMM+eiw5T/snyQkAbapWKMANxthfoGC3qfVgYRJ0R+HRl9H1yTrOJn+KyVuEO+QOg==",
   "success": true,
-  "projectFilePath": "D:\\facultate 2\\SEM5C\\.NET-Project-main\\PricePredictionApp\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\rbulb\\Source\\Repos\\roxana413\\.NET-Project\\PricePredictionApp\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rbulb\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\rbulb\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\rbulb\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

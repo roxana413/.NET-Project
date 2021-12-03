@@ -26,11 +26,16 @@
       "DisplayName": "WebAPI",
       "ColorIndex": 4
     },
-    "ef479be3-8040-426e-bf2b-839853f9ebfb": {
-      "ProjectGuid": "ef479be3-8040-426e-bf2b-839853f9ebfb",
-      "DisplayName": "WebUI",
+    "151e16d6-366b-449c-ab95-87aa981c49f5": {
+      "ProjectGuid": "151e16d6-366b-449c-ab95-87aa981c49f5",
+      "DisplayName": "Core",
       "ColorIndex": 5
+    },
+    "6b2478c0-0e1e-4ae9-881f-ad10c0710eb1": {
+      "ProjectGuid": "6b2478c0-0e1e-4ae9-881f-ad10c0710eb1",
+      "DisplayName": "Infrastructure",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }
