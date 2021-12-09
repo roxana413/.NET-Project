@@ -5,13 +5,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Persistence.EFCore
 {
-    public class DataContext : IdentityDbContext<IdentityUser>
+    public class DataContext : IdentityDbContext<IdentityUser, IdentityRole, string>
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
 
         public DbSet<House> Houses { get; set; }
+        public DbSet<UserHistory> UserHistory { get; set; }
 
         public async Task<int> SaveChangesAsync()
         {
