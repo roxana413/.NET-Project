@@ -11,6 +11,6 @@
     "\\PricePredictionApp\\WebAPI\\Controllers",
     "\\PricePredictionApp\\WebAPI\\Controllers\\v1"
   ],
-  "SelectedNode": "\\PricePredictionApp\\PricePredictionApp.sln",
+  "SelectedNode": "\\PricePredictionApp\\Persistence\\PersistenceDI.cs",
   "PreviewInSolutionExplorer": false
 }

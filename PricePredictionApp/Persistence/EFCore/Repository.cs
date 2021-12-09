@@ -6,7 +6,7 @@ namespace Persistence.EFCore
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
-        private readonly DataContext context;
+        protected readonly DataContext context;
 
         public Repository(DataContext context)
         {
@@ -40,6 +40,13 @@ namespace Persistence.EFCore
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
             return await context.Set<TEntity>().ToListAsync();
+        }
+        public virtual async Task<IEnumerable<TEntity>> GetAllAsync(int pageIndex, int pageSize)
+        {
+            return await context.Set<TEntity>()
+                .Skip(pageIndex * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
         }
 
         public async Task<TEntity> GetByIdAsync(Guid id)

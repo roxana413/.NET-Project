@@ -12,6 +12,7 @@ namespace Persistence.EFCore
         }
 
         public DbSet<House> Houses { get; set; }
+        public DbSet<UserHistory> UserHistory { get; set; }
 
         public async Task<int> SaveChangesAsync()
         {

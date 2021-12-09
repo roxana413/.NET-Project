@@ -11,5 +11,6 @@ namespace Application.Interfaces
     {
         Task<IEnumerable<UserDTO>> GetUsers();
         Task<UserDTO> GetUserByName(string userName);
+        Task<string?> GetUserIdByName(string userName);
     }
 }

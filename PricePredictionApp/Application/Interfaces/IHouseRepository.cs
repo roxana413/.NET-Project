@@ -2,6 +2,6 @@
 
 namespace Application.Interfaces
 {
-    public interface IHouseRepository : IRepository<House> { 
+    public interface IHouseRepository : IRepository<House> {
     }
 }

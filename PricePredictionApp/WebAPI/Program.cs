@@ -48,7 +48,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-Persistence.PersistenceDI.CreateRoles(app.Services).Wait();
+using (var scope = app.Services.CreateScope())
+{
+    PersistenceDI.CreateRoles(scope.ServiceProvider).Wait();
+    PersistenceDI.SeedDatabase(scope.ServiceProvider).Wait();
+
+}
+
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

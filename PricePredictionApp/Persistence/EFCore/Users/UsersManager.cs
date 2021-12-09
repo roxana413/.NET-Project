@@ -42,7 +42,19 @@ namespace Persistence.EFCore.Users
                 Password = user.PasswordHash,
                 Email = user.Email
             }).SingleOrDefaultAsync(user => user.UserName == currentUser.UserName);
+
             return user;
+        }
+
+        public async Task<string?> GetUserIdByName(string userName)
+        {
+            var currentUser = await userManager.FindByNameAsync(userName);
+            if (currentUser == null)
+            {
+                return null;
+            }
+
+            return currentUser.Id;
         }
     }
 }

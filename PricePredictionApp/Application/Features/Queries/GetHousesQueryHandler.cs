@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.Constants;
+using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
 
@@ -14,7 +15,12 @@ namespace Application.Features.Queries
         }
         public async Task<IEnumerable<House>> Handle(GetHousesQuery request, CancellationToken cancellationToken)
         {
-            return await repository.GetAllAsync();
+            int pageIndex = (int)(request.PageIndex == null ? PaginationConstants.PageIndex : request.PageIndex);
+            int pageSize = (int)(request.PageSize == null || request.PageSize == 0 ? PaginationConstants.PageSize : request.PageSize);
+            Console.WriteLine(pageIndex);
+            Console.WriteLine(pageSize);
+
+            return await repository.GetAllAsync(pageIndex, pageSize);
         }
     }
 }

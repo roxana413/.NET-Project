@@ -1,10 +1,13 @@
 ﻿using Application.Exceptions;
 using Application.Features.Commands;
 using Application.Features.Queries;
+using Application.Features.UserHistory.Queries;
+using Application.Features.PricePrediction;
 using Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Application.DTO;
 
 namespace WebAPI.Controllers.v1
 {
@@ -24,11 +27,11 @@ namespace WebAPI.Controllers.v1
             return new ObjectResult(await mediator.Send(command)) { StatusCode = StatusCodes.Status201Created };
         }
 
-        [Authorize]
         [HttpGet]
-        public async Task<IActionResult> Get()
+        [ProducesResponseType(typeof(IEnumerable<HouseDTO>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> Get([FromQuery] int pageIndex, [FromQuery] int pageSize)
         {
-            return Ok(await mediator.Send(new GetHousesQuery()));
+            return Ok(await mediator.Send(new GetHousesQuery() { PageIndex = pageIndex, PageSize = pageSize }));
         }
 
         [HttpGet("{Id}")]
@@ -44,6 +47,47 @@ namespace WebAPI.Controllers.v1
             {
                 return NotFound(ex.Message); 
             }
+        }
+
+        [Authorize]
+        [HttpGet("history")]
+        [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(IEnumerable<HouseDTO>), StatusCodes.Status200OK)]
+        public async Task<IActionResult> GetHistory()
+        {
+            try
+            {
+                return Ok(await mediator.Send(new GetUserHistoryQuery()
+                {
+                    UserName = HttpContext.User.Identity.Name
+                }));
+            }
+            catch (EntityNotFoundException ex)
+            {
+                return new ObjectResult(ex.Message) { StatusCode = StatusCodes.Status500InternalServerError };
+            }
+            
+        }
+
+        [Authorize]
+        [HttpPost("predict")]
+        [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
+        [ProducesResponseType(typeof(HouseDTO), StatusCodes.Status200OK)]
+        public async Task<IActionResult> Predict([FromBody] HouseDTO houseForm)
+        {
+            try
+            {
+                return Ok(await mediator.Send(new PredictHouseCommand()
+                {
+                    UserName = HttpContext.User.Identity.Name,
+                    HouseForm = houseForm
+                }));
+            }
+            catch (EntityNotFoundException ex)
+            {
+                return new ObjectResult(ex.Message) { StatusCode = StatusCodes.Status500InternalServerError };
+            }
+            
         }
 
         [HttpPut]
