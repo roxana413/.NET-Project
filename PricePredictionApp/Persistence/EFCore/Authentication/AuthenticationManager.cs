@@ -1,6 +1,7 @@
 ﻿using Application.DTO.Authentication;
 using Application.Enumerations;
 using Application.Interfaces;
+using Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -14,11 +15,15 @@ namespace Persistence.EFCore.Authentication
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly IConfiguration configuration;
+        private readonly DataContext context;
+        private readonly IUserHistoryRepository userHistoryRepository;
 
-        public AuthenticationManager(UserManager<IdentityUser> userManager, IConfiguration configuration)
+        public AuthenticationManager(UserManager<IdentityUser> userManager, IConfiguration configuration, DataContext context, IUserHistoryRepository userHistoryRepository)
         {
             this.userManager = userManager;
             this.configuration = configuration;
+            this.context = context;
+            this.userHistoryRepository = userHistoryRepository;
         }
 
         public async Task<(AuthenticationStatus Status, string? ErrorMessage)> Register(RegisterModel registerModel)
@@ -34,6 +39,7 @@ namespace Persistence.EFCore.Authentication
                 UserName = registerModel.UserName,
                 Email = registerModel.Email,
             };
+
             var result = await userManager.CreateAsync(newUser, registerModel.Password);
             if (!result.Succeeded)
             {
@@ -45,6 +51,9 @@ namespace Persistence.EFCore.Authentication
                 }
                 return (AuthenticationStatus.INVALID_PASSWORD, string.Join("\n", errors));
             }
+
+            await userHistoryRepository.AddAsync(new UserHistory() { UserId = newUser.Id });
+
             return (AuthenticationStatus.SUCCESS, null);
         }
 

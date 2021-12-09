@@ -1,6 +1,7 @@
 using Persistence;
 using Application;
 using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,11 +48,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+using (var scope = app.Services.CreateScope())
+{
+    PersistenceDI.CreateRoles(scope.ServiceProvider).Wait();
+    PersistenceDI.SeedDatabase(scope.ServiceProvider).Wait();
+
+}
+
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
 
 app.Run();

@@ -3,7 +3,7 @@
     public class HouseDTO
     {
         public DateTime DateSold { get; set; }
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         public int Bedrooms { get; set; }
         public decimal Bathrooms { get; set; }
         public decimal LivingArea { get; set; }

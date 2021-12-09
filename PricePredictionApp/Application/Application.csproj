@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\PricePrediction\" />
+    <Folder Include="Features\Users\Commands\" />
   </ItemGroup>
 
   <ItemGroup>

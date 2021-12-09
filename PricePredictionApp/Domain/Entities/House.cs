@@ -5,7 +5,7 @@ namespace Domain.Entities
     public class House : BaseEntity
     {
         public DateTime DateSold { get; set; }
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         public int Bedrooms { get; set; }
         public decimal Bathrooms { get; set; }
         public decimal LivingArea { get; set; }
@@ -19,7 +19,7 @@ namespace Domain.Entities
         public decimal BasementArea { get; set; }
         public int YearBuilt { get; set; }
         public int YearRenovated { get; set; }
-        public string Zipcode { get; set; }
+        public string? Zipcode { get; set; }
 
     }
 }

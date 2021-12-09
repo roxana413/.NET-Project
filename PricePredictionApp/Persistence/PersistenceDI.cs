@@ -8,6 +8,9 @@ using Microsoft.IdentityModel.Tokens;
 using Application.Interfaces;
 using System.Text;
 using Persistence.EFCore.Authentication;
+using Persistence.EFCore.Users;
+using Domain.Entities;
+using Persistence.DataImporter;
 
 namespace Persistence
 {
@@ -18,6 +21,7 @@ namespace Persistence
             services.AddDbContext<DataContext>(options => options.UseInMemoryDatabase("TestDatabase"));
             services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
             services.AddTransient<IHouseRepository, HouseRepository>();
+            services.AddTransient<IUserHistoryRepository, UserHistoryRepository>();
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<DataContext>()
@@ -42,6 +46,32 @@ namespace Persistence
             });
 
             services.AddTransient<IAuthenticationManager, AuthenticationManager>();
+            services.AddTransient<IUsersManager, UsersManager>();
+
+        }
+
+        public static async Task CreateRoles(IServiceProvider provider)
+        {
+            var roleManager = provider.GetRequiredService<RoleManager<IdentityRole>>();
+            string[] roleNames = { "Admin", "User" };
+
+            foreach (string roleName in roleNames)
+            {
+                var roleExists = await roleManager.RoleExistsAsync(roleName);
+                if (!roleExists)
+                {
+                    await roleManager.CreateAsync(new IdentityRole(roleName));
+                }
+            }
+        }
+
+        public static async Task SeedDatabase(IServiceProvider provider)
+        {
+            var context = provider.GetService<DataContext>();
+            context.Database.EnsureCreated();
+            var importedHouses = HouseDataImporter.ReadRecords(@"..\Persistence\DataImporter\kc_house_data.csv");
+            await context.Houses.AddRangeAsync(importedHouses);
+            await context.SaveChangesAsync();
         }
     }
 }
