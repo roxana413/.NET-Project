@@ -58,9 +58,12 @@ export class LoginComponent implements OnInit {
   onSubmit(): void {
     console.log(this.form.controls.username.value)
     console.log(this.form.controls.password.value)
-    this.user.name = this.form.controls.username.value
-    this.user.password = this.form.controls.password.value
-    this.authService.login(this.user).then((data) => {
+
+    this.user = {
+      username: this.form.controls.username.value,
+      password: this.form.controls.password.value
+    }
+    this.authService.login({ "loginInfo": { "userName": this.user.username, "password": this.user.password } }).then((data) => {
       console.log(data)
     })
 

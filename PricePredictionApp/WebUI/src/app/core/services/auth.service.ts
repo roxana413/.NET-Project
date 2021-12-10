@@ -69,15 +69,16 @@ export class AuthService {
     }
   }
 
-  async login(user: User): Promise<any> {
-    this.apiService.post(this.constants.API_ENDPOINT + "login", user).subscribe(
+  async login(user: any): Promise<any> {
+    console.log(user)
+    this.apiService.post(this.constants.API_ENDPOINT + "Authentication/Login", user).subscribe(
       (data: any) => { return data }, // success path
       error => { return error } // error path
     );
   }
 
   async register(user: User): Promise<any> {
-    this.apiService.post(this.constants.API_ENDPOINT + "register", user).subscribe(
+    this.apiService.post(this.constants.API_ENDPOINT + "Authentication/Register", user).subscribe(
       (data: any) => { return data }, // success path
       error => { return error } // error path
     );
