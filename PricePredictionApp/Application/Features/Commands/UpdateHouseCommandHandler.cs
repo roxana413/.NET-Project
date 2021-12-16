@@ -16,6 +16,8 @@ namespace Application.Features.Commands
         }
         public async Task<Guid> Handle(UpdateHouseCommand request, CancellationToken cancellationToken)
         {
+            ArgumentNullException.ThrowIfNull(request.UpdatedHouse, nameof(request));
+
             House house = await repository.GetByIdAsync(request.UpdatedHouse.Id);
             if (house == null || house.Id == Guid.Empty)
             {

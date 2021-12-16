@@ -2,11 +2,6 @@
 using Application.Interfaces;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistence.EFCore
 {
@@ -22,7 +17,9 @@ namespace Persistence.EFCore
                 .Include(uh => uh.CreatedHouses)
                 .Where(uh => uh.UserId == userId)
                 .FirstOrDefaultAsync();
+
             userHistory.CreatedHouses.Add(createdHouse);
+            
             await context.SaveChangesAsync();
 
             return createdHouse;

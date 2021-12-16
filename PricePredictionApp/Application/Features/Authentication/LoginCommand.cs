@@ -6,6 +6,6 @@ namespace Application.Features.Authentication
 {
     public class LoginCommand : IRequest<(AuthenticationStatus Status, LoginToken? Token, string? ErrorMessage)>
     {
-        public LoginModel LoginInfo { get; set; }
+        public LoginModel? LoginInfo { get; set; }
     }
 }

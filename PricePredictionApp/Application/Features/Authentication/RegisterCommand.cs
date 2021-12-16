@@ -6,6 +6,6 @@ namespace Application.Features.Authentication
 {
     public class RegisterCommand : IRequest<(AuthenticationStatus Status, string? ErrorMessage)>
     {
-        public RegisterModel RegisterInfo { get; set; }
+        public RegisterModel? RegisterInfo { get; set; }
     }
 }

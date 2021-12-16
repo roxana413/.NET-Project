@@ -3,11 +3,6 @@ using Application.Exceptions;
 using Application.Interfaces;
 using Domain.Entities;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Features.PricePrediction
 {
@@ -25,6 +20,11 @@ namespace Application.Features.PricePrediction
         }
         public async Task<HouseDTO> Handle(PredictHouseCommand request, CancellationToken cancellationToken)
         {
+            if (request.HouseForm == null || request.UserName == null)
+            {
+                throw new ArgumentNullException(nameof(request));
+            }
+
             House createdHouse = new House
             {
                 DateSold = request.HouseForm.DateSold,

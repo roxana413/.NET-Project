@@ -5,6 +5,6 @@ namespace Application.Features.Commands
 {
     public class CreateHouseCommand : IRequest<Guid>
     {
-        public HouseDTO NewHouse { get; set; }
+        public HouseDTO? NewHouse { get; set; }
     }
 }

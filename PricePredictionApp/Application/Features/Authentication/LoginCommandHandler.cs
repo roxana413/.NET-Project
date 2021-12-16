@@ -15,6 +15,11 @@ namespace Application.Features.Authentication
         }
         public async Task<(AuthenticationStatus Status, LoginToken? Token, string? ErrorMessage)> Handle(LoginCommand request, CancellationToken cancellationToken)
         {
+            if (request.LoginInfo == null)
+            {
+                throw new ArgumentNullException(nameof(request));
+            }
+
             return await authenticationManager.Login(request.LoginInfo);
         }
     }
