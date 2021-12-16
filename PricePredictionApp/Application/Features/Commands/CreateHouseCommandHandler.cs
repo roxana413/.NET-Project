@@ -14,6 +14,11 @@ namespace Application.Features.Commands
         }
         public async Task<Guid> Handle(CreateHouseCommand request, CancellationToken cancellationToken)
         {
+            if (request.NewHouse == null)
+            {
+                throw new ArgumentNullException(nameof(request));
+            }
+
             House createdHouse = new House
             {
                 DateSold = request.NewHouse.DateSold,

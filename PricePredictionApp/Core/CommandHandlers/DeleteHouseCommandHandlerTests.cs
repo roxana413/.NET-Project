@@ -1,6 +1,10 @@
-﻿using Application.Features.Commands;
+﻿using Application.Exceptions;
+using Application.Features.Commands;
 using Application.Interfaces;
+using Domain.Entities;
 using FakeItEasy;
+using Infrastructure;
+using Persistence.EFCore;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -18,11 +22,28 @@ namespace Core.CommandHandlers
             handler = new DeleteHouseCommandHandler(repository);
         }
 
-        public async Task Given_DeleteHouseCommandHandlerAndEmptyHouse_When_HandlerIsCalled_Then_ExceptionIsThrown()
+        [Fact]
+        public async Task Given_NonexistentHouseId_When_HandlerIsCalled_Then_EntityNotFoundExceptionIsThrown()
         {
-            Func<Task<Guid>> act = async () => await handler.Handle(new DeleteHouseCommand {  Id = Guid.Empty }, default);
+            var command = new DeleteHouseCommand() { Id = Guid.Parse("21e34a4f-f2fc-4343-ac55-3f7f35f19cde") };
+            House? fakeHouse = null;
+            A.CallTo(() => repository.GetByIdAsync(Guid.Parse("21e34a4f-f2fc-4343-ac55-3f7f35f19cde"))).Returns(fakeHouse);
 
-            await Assert.ThrowsAsync<Exception>(act);
+            Func<DeleteHouseCommand, Task<Guid>> act = async command => await handler.Handle(command, default);
+
+            await Assert.ThrowsAsync<EntityNotFoundException>(() => act(command));
+        }
+
+        [Fact]
+        public async Task Given_ExistingHouseId_WhenHandlerIsCalled_Then_DeleteAsyncIsCalled()
+        {
+            var command = new DeleteHouseCommand() { Id = Guid.Parse("21e34a4f-f2fc-4343-ac55-3f7f35f19cdf") };
+            A.CallTo(() => repository.GetByIdAsync(Guid.Parse("21e34a4f-f2fc-4343-ac55-3f7f35f19cdf"))).Returns(new House());
+
+            await handler.Handle(command, default);
+
+            A.CallTo(() => repository.DeleteAsync(A<House>._)).MustHaveHappenedOnceExactly();
+
         }
     }
 }

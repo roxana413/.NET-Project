@@ -1,0 +1,12 @@
+~
+uC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\Authentication\LoginCommandHandlerTests.csutf-8Å
+xC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\Authentication\RegisterCommandHandlerTests.csutf-8Ö
+|C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\CommandHandlers\CreateHouseCommandHandlerTests.csutf-8Ö
+|C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\CommandHandlers\DeleteHouseCommandHandlerTests.csutf-8Ö
+|C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\CommandHandlers\UpdateHouseCommandHandlerTests.csutf-8{
+rC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\QueryHandlers\GetHouseByIdQueryTests.csutf-8x
+oC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\QueryHandlers\GetHousesQueryTests.csutf-8}
+tC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\UserHistory\GetUserHistoryQueryHandler.csutf-8~
+sC:\Users\rbulb\.nuget\packages\microsoft.net.test.sdk\16.11.0\build\netcoreapp2.1\Microsoft.NET.Test.Sdk.Program.csutf-8ñ
+äC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8{
+pC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\obj\Debug\net6.0\Core.AssemblyInfo.csutf-8

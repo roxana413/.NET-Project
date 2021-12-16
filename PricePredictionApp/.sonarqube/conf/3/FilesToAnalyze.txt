@@ -1,0 +1,10 @@
+﻿C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\DataImporter\HouseDataImporter.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\DataImporter\HousesDataDefaultMapper.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\EFCore\Authentication\AuthenticationManager.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\EFCore\DataContext.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\EFCore\HouseRepository.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\EFCore\Repository.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\EFCore\UserHistoryRepository.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\EFCore\Users\UsersManager.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\PersistenceDI.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\DataImporter\kc_house_data.csv

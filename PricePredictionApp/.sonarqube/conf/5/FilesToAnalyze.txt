@@ -1,0 +1,13 @@
+﻿C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Controllers\BaseController.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Controllers\v1\AuthenticationController.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Controllers\v1\HousesController.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Controllers\v1\PricePredictionController.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Controllers\v1\UsersController.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Program.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\WebAPI.GlobalUsings.g.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\WebAPI.AssemblyInfo.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\WebAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\appsettings.Development.json
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\appsettings.json
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Properties\launchSettings.json

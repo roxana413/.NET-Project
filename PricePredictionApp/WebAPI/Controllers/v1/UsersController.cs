@@ -1,7 +1,6 @@
 ﻿using Application.Features.Users.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authorization;
 
 namespace WebAPI.Controllers.v1

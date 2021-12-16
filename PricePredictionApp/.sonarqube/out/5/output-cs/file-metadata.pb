@@ -1,0 +1,11 @@
+s
+jC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Controllers\BaseController.csutf-8Ä
+wC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Controllers\v1\AuthenticationController.csutf-8x
+oC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Controllers\v1\HousesController.csutf-8Å
+xC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Controllers\v1\PricePredictionController.csutf-8w
+nC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Controllers\v1\UsersController.csutf-8`
+WC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\Program.csutf-8Å
+vC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\WebAPI.GlobalUsings.g.csutf-8ò
+åC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.csutf-8
+tC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\WebAPI.AssemblyInfo.csutf-8ì
+áC:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\obj\Debug\net6.0\WebAPI.MvcApplicationPartsAssemblyInfo.csutf-8

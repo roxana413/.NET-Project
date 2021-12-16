@@ -17,8 +17,6 @@ namespace Application.Features.Queries
         {
             int pageIndex = (int)(request.PageIndex == null ? PaginationConstants.PageIndex : request.PageIndex);
             int pageSize = (int)(request.PageSize == null || request.PageSize == 0 ? PaginationConstants.PageSize : request.PageSize);
-            Console.WriteLine(pageIndex);
-            Console.WriteLine(pageSize);
 
             return await repository.GetAllAsync(pageIndex, pageSize);
         }
