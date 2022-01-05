@@ -1,3 +1,4 @@
+import { Config } from './../models/config';
 import { User } from './../models/user';
 import { Constants } from './../../config/constants';
 import { ApiHttpService } from './api-http.service';
@@ -16,6 +17,8 @@ export class AuthService {
   authInstance: any;
   gapiSetup: boolean;
   error: any;
+
+  config: Config | undefined;
 
   isUserLoggedIn = false
   userLoggedInStateChange: Subject<boolean> = new Subject<boolean>();
@@ -77,11 +80,10 @@ export class AuthService {
     );
   }
 
-  async register(user: User): Promise<any> {
-    this.apiService.post(this.constants.API_ENDPOINT + "Authentication/Register", user).subscribe(
-      (data: any) => { return data }, // success path
-      error => { return error } // error path
-    );
+  async register(user: any): Promise<any> {
+    console.log(user)
+    this.apiService.post(this.constants.API_ENDPOINT + "Authentication/Register", user)
+      .subscribe((data: Config) => this.config = { ...data });
   }
 
 

@@ -25,7 +25,8 @@ export class RegisterComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router) {
     this.form = this.fb.group({
-      username: ['', Validators.email],
+      email: ['', Validators.email],
+      username: ['', Validators.required],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required]
     });
@@ -37,9 +38,10 @@ export class RegisterComponent implements OnInit {
 
 
   onSubmit(): void {
-    console.log(this.form.controls.username.value)
-    console.log(this.form.controls.password.value)
-    console.log(this.form.controls.confirmPassword.value)
+    //console.log(this.form.controls.email.value)
+    //console.log(this.form.controls.username.value)
+    //console.log(this.form.controls.password.value)
+    //console.log(this.form.controls.confirmPassword.value)
 
     // validation password and confirmPassword are the same
 
@@ -50,6 +52,15 @@ export class RegisterComponent implements OnInit {
       return
     }
     //make a call to api
+
+    this.user = {
+      username: this.form.controls.username.value,
+      email: this.form.controls.email.value,
+      password: this.form.controls.password.value
+    }
+    this.authService.register({ "registerInfo": { "email": this.user.email, "password": this.user.password, "userName": this.user.username } }).then((data) => {
+      console.log(data)
+    })
 
   }
 
