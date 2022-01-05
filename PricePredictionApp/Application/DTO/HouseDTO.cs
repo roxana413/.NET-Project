@@ -17,6 +17,6 @@
         public decimal BasementArea { get; set; }
         public int YearBuilt { get; set; }
         public int YearRenovated { get; set; }
-        public string Zipcode { get; set; }
+        public string? Zipcode { get; set; }
     }
 }

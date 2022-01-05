@@ -1,0 +1,29 @@
+Product projects
+---------------------------------------
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Domain\Domain.csproj
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Application\Application.csproj
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Persistence\Persistence.csproj
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\WebAPI\WebAPI.csproj
+
+
+Test projects
+---------------------------------------
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Core\Core.csproj
+C:\Users\rbulb\source\repos\roxana413\.NET-Project\PricePredictionApp\Infrastructure\Infrastructure.csproj
+
+
+Invalid projects
+---------------------------------------
+{none}
+
+
+Skipped projects
+---------------------------------------
+{none}
+
+
+Excluded projects
+---------------------------------------
+{none}
+
+

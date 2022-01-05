@@ -1,7 +1,6 @@
-using Persistence;
+﻿using Persistence;
 using Application;
 using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -36,6 +35,7 @@ builder.Services.AddSwaggerGen(c =>
                     }
                 });
 });
+builder.Services.AddCors();
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddApplication();
 
@@ -55,12 +55,13 @@ using (var scope = app.Services.CreateScope())
 
 }
 
+app.UseCors(endpoints => endpoints.AllowAnyMethod().AllowAnyHeader().SetIsOriginAllowed(origin => true).AllowCredentials());
+
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-
 
 app.Run();

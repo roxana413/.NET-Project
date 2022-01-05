@@ -3,6 +3,7 @@ using Application.Features.Commands;
 using Application.Interfaces;
 using Domain.Entities;
 using FakeItEasy;
+using System;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -17,6 +18,16 @@ namespace Core.CommandHandlers
         {
             repository = A.Fake<IHouseRepository>();
             handler = new CreateHouseCommandHandler(repository);  
+        }
+
+        [Fact]
+        public async Task Given_NullNewHouse_When_HandlerIsCalled_Then_ArgumentNullExceptionIsThrown()
+        {
+            var command = new CreateHouseCommand();
+
+            Func<CreateHouseCommand, Task<Guid>> act = async command => await handler.Handle(command, default);
+
+            await Assert.ThrowsAsync<ArgumentNullException>(() => act(command));
         }
 
         [Fact]

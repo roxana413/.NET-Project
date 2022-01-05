@@ -14,6 +14,11 @@ namespace Application.Features.Authentication
         }
         public async Task<(AuthenticationStatus Status, string? ErrorMessage)> Handle(RegisterCommand request, CancellationToken cancellationToken)
         {
+            if (request.RegisterInfo == null)
+            {
+                throw new ArgumentNullException(nameof(request));
+            }
+
             return await authenticationManager.Register(request.RegisterInfo);
         }
     }

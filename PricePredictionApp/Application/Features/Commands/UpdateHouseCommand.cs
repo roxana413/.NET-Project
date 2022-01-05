@@ -5,6 +5,6 @@ namespace Application.Features.Commands
 {
     public class UpdateHouseCommand : IRequest<Guid>
     {
-        public House UpdatedHouse { get; set; }    
+        public House? UpdatedHouse { get; set; }    
     }
 }

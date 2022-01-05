@@ -15,14 +15,12 @@ namespace Persistence.EFCore.Authentication
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly IConfiguration configuration;
-        private readonly DataContext context;
         private readonly IUserHistoryRepository userHistoryRepository;
 
-        public AuthenticationManager(UserManager<IdentityUser> userManager, IConfiguration configuration, DataContext context, IUserHistoryRepository userHistoryRepository)
+        public AuthenticationManager(UserManager<IdentityUser> userManager, IConfiguration configuration, IUserHistoryRepository userHistoryRepository)
         {
             this.userManager = userManager;
             this.configuration = configuration;
-            this.context = context;
             this.userHistoryRepository = userHistoryRepository;
         }
 
